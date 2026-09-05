@@ -16,7 +16,7 @@
 <body>
   <header class="site-header"><a class="brand" href="#top" aria-label="Chip & Co. Productions home"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788578831/logo.webp" alt="Chip & Co. Productions logo"><span>Productions</span></a><nav aria-label="Primary navigation"><a href="#about">About</a><a href="#work">Work</a><a href="#services">Services</a><a class="cta" href="#contact">Let's Create</a></nav></header>
   <main id="top">
-    <section class="hero"><div class="hero-copy"><div class="eyebrow">Chip & Co. Productions</div><h1>Photo. Film.<br>Creative.</h1><div class="actions"><a class="btn fill" href="#work">Selected Work</a><a class="btn" href="#contact">Start a Project</a></div></div><figure class="hero-art"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788580478/IMG_6875.jpg" width="3024" height="4032" fetchpriority="high" alt="Black-and-white live performance photograph"></figure><div class="diamonds" aria-hidden="true">◆ ◆ ◆</div></section>
+    <section class="hero"><div class="hero-copy"><div class="eyebrow">Chip & Co. Productions</div><h1>Photo. Film.<br>Creative.</h1><div class="actions"><a class="btn fill" href="#work">Selected Work</a><a class="btn" href="#contact">Start a Project</a></div></div><figure class="hero-art hero-slideshow" aria-label="Selected Chip & Co. Productions photography"><img class="hero-slide is-active" src="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788580478/IMG_6875.jpg" alt="Black-and-white live performance photograph" fetchpriority="high"><img class="hero-slide" src="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788580477/IMG_9534.jpg" alt="Selected Chip & Co. Productions photograph" loading="eager"><img class="hero-slide" src="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788580477/IMG_7401.jpg" alt="Selected Chip & Co. Productions photograph" loading="eager"><img class="hero-slide" src="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788580478/IMG_3118.jpg" alt="Selected Chip & Co. Productions photograph" loading="eager"><img class="hero-slide" src="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788580478/IMG_8785-Enhanced-NR.jpg" alt="Selected Chip & Co. Productions photograph" loading="eager"></figure><div class="diamonds" aria-hidden="true">◆ ◆ ◆</div></section>
     <section id="about" class="intro section-light"><div><div class="eyebrow dark">About</div><h2>Independent<br>production studio.</h2></div><p>Photography, film, editing, and creative direction.</p></section>
     <section id="work" class="work"><div class="work-head"><div><div class="eyebrow">Work</div><h2>Selected<br>work.</h2></div><p>Portraits, live music, events, documentary, lifestyle, and commercial work.</p></div><div class="portfolio">
       <figure class="tile"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788580477/20230401-IMG_0116.jpg" width="1350" height="1080" loading="lazy" decoding="async" alt="Chip & Co. Productions selected photography 1"><figcaption><span>Selected Work</span><span>01</span></figcaption></figure>
@@ -36,5 +36,18 @@
       <div class="social-block" aria-label="Instagram"><div class="social-intro"><span class="social-kicker">Instagram</span><p>Studio and personal accounts.</p><div class="ig-profile-links"><a href="https://www.instagram.com/chipandcoproductions" target="_blank" rel="noopener noreferrer">@chipandcoproductions ↗</a><a href="https://www.instagram.com/donnie.pease" target="_blank" rel="noopener noreferrer">@donnie.pease ↗</a></div></div><div class="instagram-embeds"><div class="instagram-embed"><iframe src="https://www.instagram.com/p/DDptsbyyRJV/embed/captioned" title="Instagram post" loading="lazy" allowtransparency="true" frameborder="0" scrolling="no"></iframe></div><div class="instagram-embed"><iframe src="https://www.instagram.com/p/DZL3kaFmvZ1/embed/captioned" title="Instagram post" loading="lazy" allowtransparency="true" frameborder="0" scrolling="no"></iframe></div></div></div>
       <footer><span>© 2026 Chip & Co. Productions LLC</span><span>Film · Photo · Creative</span></footer></section>
   </main>
+  <script>
+    (() => {
+      const slides = Array.from(document.querySelectorAll('.hero-slide'));
+      if (slides.length < 2 || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      let current = 0;
+      setInterval(() => {
+        const next = (current + 1) % slides.length;
+        slides[next].classList.add('is-active');
+        slides[current].classList.remove('is-active');
+        current = next;
+      }, 5000);
+    })();
+  </script>
 </body>
 </html>
