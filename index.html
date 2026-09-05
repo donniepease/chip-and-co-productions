@@ -39,14 +39,17 @@
   <script>
     (() => {
       const slides = Array.from(document.querySelectorAll('.hero-slide'));
-      if (slides.length < 2 || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      if (slides.length < 2) return;
       let current = 0;
-      setInterval(() => {
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const advance = () => {
         const next = (current + 1) % slides.length;
         slides[next].classList.add('is-active');
         slides[current].classList.remove('is-active');
         current = next;
-      }, 5000);
+      };
+      window.setInterval(advance, 5000);
+      if (reducedMotion) document.documentElement.classList.add('reduced-motion');
     })();
   </script>
 </body>
