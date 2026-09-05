@@ -51,10 +51,11 @@ h1{font-size:clamp(70px,9.2vw,138px);line-height:.78;letter-spacing:-.055em;marg
 .contact{padding:120px 7vw 65px}
 .contact h2{font-size:clamp(70px,11vw,155px);margin-bottom:55px}
 .mail{font-size:clamp(18px,3vw,38px);border-bottom:1px solid;padding-bottom:5px}
-.social-block{margin-top:78px;padding-top:30px;border-top:1px solid var(--line);display:grid;grid-template-columns:.8fr 1.2fr;gap:6vw;align-items:start}
-.social-intro{max-width:360px}.social-kicker{display:block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}.social-intro p{margin:0;color:#68645d;line-height:1.7;font-size:14px}
-.social-links{display:grid;gap:10px}.social-card{display:grid;grid-template-columns:46px 1fr 30px;align-items:center;gap:14px;border:1px solid var(--line);padding:18px 20px;transition:background .2s ease,border-color .2s ease,transform .2s ease}.social-card:hover{background:#e6e1d6;border-color:#aaa49a;transform:translateY(-2px)}.social-icon{width:42px;height:42px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;font-size:22px}.social-copy{min-width:0}.social-copy small{display:block;color:var(--muted);font-size:10px;letter-spacing:.15em;text-transform:uppercase;margin-bottom:4px}.social-copy strong{font-size:17px;font-weight:500;word-break:break-word}.social-arrow{font-size:22px;text-align:right}
+.social-block{margin-top:78px;padding-top:30px;border-top:1px solid var(--line);display:grid;grid-template-columns:.55fr 1.45fr;gap:5vw;align-items:start}
+.social-intro{max-width:300px}.social-kicker{display:block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}.social-intro p{margin:0;color:#68645d;line-height:1.7;font-size:14px}
+.social-previews{display:grid;grid-template-columns:1fr 1fr;gap:14px}.ig-preview{border:1px solid var(--line);background:#f6f2e9;overflow:hidden;transition:transform .2s ease,border-color .2s ease,background .2s ease}.ig-preview:hover{transform:translateY(-3px);border-color:#9e998e;background:#faf7f0}.ig-head{display:grid;grid-template-columns:48px 1fr 24px;gap:12px;align-items:center;padding:15px}.ig-avatar{width:46px;height:46px;border-radius:50%;overflow:hidden;border:1px solid #c8c2b6;display:grid;place-items:center;background:#111;color:white;font:600 13px/1 Inter,sans-serif;letter-spacing:.08em}.ig-avatar img{width:100%;height:100%;object-fit:contain;padding:7px;mix-blend-mode:multiply}.ig-meta{min-width:0}.ig-meta strong{display:block;font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ig-meta span{display:block;margin-top:2px;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.12em}.ig-open{font-size:19px;color:#777}.ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:#e4dfd4}.ig-grid img{width:100%;aspect-ratio:1/1;object-fit:cover}.ig-foot{display:flex;justify-content:space-between;gap:12px;padding:12px 15px;font-size:9px;text-transform:uppercase;letter-spacing:.13em;color:#6d6960}.ig-foot span:last-child{color:#9a958b;text-align:right}
 footer{margin-top:90px;border-top:1px solid var(--line);padding-top:25px;display:flex;justify-content:space-between;gap:20px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#716d65}
+@media(max-width:1100px){.social-block{grid-template-columns:1fr}.social-intro{max-width:440px}}
 @media(max-width:900px){
   .brand span{display:none}
   .hero{grid-template-columns:1fr;min-height:auto}
@@ -70,8 +71,8 @@ footer{margin-top:90px;border-top:1px solid var(--line);padding-top:25px;display
   .service{grid-template-columns:42px 1fr}
   .service p{grid-column:2}
   .contact{padding:85px 24px 45px}
-  .social-block{grid-template-columns:1fr;gap:25px;margin-top:60px}
 }
+@media(max-width:700px){.social-previews{grid-template-columns:1fr}}
 @media(max-width:650px){
   .site-header{height:66px;padding:0 18px}
   .brand img{width:38px;height:46px}
@@ -88,6 +89,6 @@ footer{margin-top:90px;border-top:1px solid var(--line);padding-top:25px;display
   .brand-break{padding-top:70px}
   .services{padding:85px 24px}
   .contact h2{font-size:76px}
-  .social-card{grid-template-columns:38px minmax(0,1fr) 24px;padding:15px 14px;gap:10px}.social-icon{width:36px;height:36px;font-size:19px}.social-copy strong{font-size:14px}
+  .social-block{margin-top:60px}.ig-head{grid-template-columns:44px 1fr 22px;padding:13px}.ig-avatar{width:42px;height:42px}.ig-meta strong{font-size:12px}.ig-foot{padding:11px 13px;display:block;line-height:1.8}.ig-foot span{display:block}.ig-foot span:last-child{text-align:left}
   footer{margin-top:70px;display:block;line-height:2.2}
 }
