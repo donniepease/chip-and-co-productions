@@ -12,6 +12,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .collection-head{cursor:pointer;user-select:none;-webkit-user-select:none}
+    .collection-head:focus-visible{outline:1px solid #777;outline-offset:5px}
+    .collection-head span:last-child::after{content:"  −";display:inline-block;margin-left:10px;color:#fff;font-size:13px;line-height:1}
+    .collection.is-collapsed>.editorial-grid,.collection.is-collapsed>.archive-grid{display:none!important}
+    .collection.is-collapsed .collection-head span:last-child::after{content:"  +"}
+    .collection.is-collapsed{padding-bottom:18px}
+    @media(max-width:650px){.collection-head span:last-child::after{font-size:16px;margin-left:7px}}
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -36,52 +45,57 @@
 
     <section id="work" class="work">
       <div class="work-head"><div><div class="eyebrow">Work</div><h2>Selected<br>work.</h2></div><p>Grouped into collections so each set can stand on its own.</p></div>
-      <nav class="work-index" aria-label="Photo collections"><a href="#collection-01">01</a><a href="#collection-02">02</a><a href="#collection-03">03</a><a href="#collection-04">04</a><a href="#archive">Archive</a></nav>
-      <section id="collection-01" class="collection"><div class="collection-head"><span>Collection 01</span><span>5 images</span></div><div class="editorial-grid">
-        <button class="shot span-5 tall" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586687/IMG_1109.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1200/v1788586687/IMG_1109.jpg" alt="Collection 01 photograph 1" loading="lazy"></button>
-        <button class="shot span-7 wide" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586684/IMG_1111.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1400/v1788586684/IMG_1111.jpg" alt="Collection 01 photograph 2" loading="lazy"></button>
-        <button class="shot span-4 tall" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586793/IMG_1126.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1100/v1788586793/IMG_1126.jpg" alt="Collection 01 photograph 3" loading="lazy"></button>
-        <button class="shot span-4 tall" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586798/IMG_1403.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1100/v1788586798/IMG_1403.jpg" alt="Collection 01 photograph 4" loading="lazy"></button>
-        <button class="shot span-4 tall" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586796/IMG_1804.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1100/v1788586796/IMG_1804.jpg" alt="Collection 01 photograph 5" loading="lazy"></button>
+      <nav class="work-index" aria-label="Photo collections"><a href="#collection-1">1</a><a href="#collection-2">2</a><a href="#collection-3">3</a><a href="#collection-4">4</a><a href="#collection-5">5</a></nav>
+
+      <section id="collection-1" class="collection"><div class="collection-head"><span>Collection 1</span><span>5 images</span></div><div class="editorial-grid">
+        <button class="shot span-5 tall" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586687/IMG_1109.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1200/v1788586687/IMG_1109.jpg" alt="Collection 1 photograph 1" loading="lazy"></button>
+        <button class="shot span-7 wide" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586684/IMG_1111.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1400/v1788586684/IMG_1111.jpg" alt="Collection 1 photograph 2" loading="lazy"></button>
+        <button class="shot span-4 tall" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586793/IMG_1126.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1100/v1788586793/IMG_1126.jpg" alt="Collection 1 photograph 3" loading="lazy"></button>
+        <button class="shot span-4 tall" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586798/IMG_1403.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1100/v1788586798/IMG_1403.jpg" alt="Collection 1 photograph 4" loading="lazy"></button>
+        <button class="shot span-4 tall" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586796/IMG_1804.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1100/v1788586796/IMG_1804.jpg" alt="Collection 1 photograph 5" loading="lazy"></button>
       </div></section>
-      <section id="collection-02" class="collection"><div class="collection-head"><span>Collection 02</span><span>8 images</span></div><div class="editorial-grid">
-        <button class="shot span-4 tall" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586526/IMG_1946.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1100/v1788586526/IMG_1946.jpg" alt="Collection 02 photograph 1" loading="lazy"></button>
-        <button class="shot span-4 tall" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586519/IMG_1951.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1100/v1788586519/IMG_1951.jpg" alt="Collection 02 photograph 2" loading="lazy"></button>
-        <button class="shot span-4 wide" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586789/IMG_2043.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1200/v1788586789/IMG_2043.jpg" alt="Collection 02 photograph 3" loading="lazy"></button>
-        <button class="shot span-7 wide" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586549/IMG_2057.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1500/v1788586549/IMG_2057.jpg" alt="Collection 02 photograph 4" loading="lazy"></button>
-        <button class="shot span-5 tall" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586556/IMG_2067.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1200/v1788586556/IMG_2067.jpg" alt="Collection 02 photograph 5" loading="lazy"></button>
-        <button class="shot span-6 wide" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586531/IMG_2104.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1400/v1788586531/IMG_2104.jpg" alt="Collection 02 photograph 6" loading="lazy"></button>
-        <button class="shot span-6 wide" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586527/IMG_2137-Edit.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1400/v1788586527/IMG_2137-Edit.jpg" alt="Collection 02 photograph 7" loading="lazy"></button>
-        <button class="shot span-12 panorama" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586535/IMG_2145.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1700/v1788586535/IMG_2145.jpg" alt="Collection 02 photograph 8" loading="lazy"></button>
+
+      <section id="collection-2" class="collection is-collapsed"><div class="collection-head"><span>Collection 2</span><span>8 images</span></div><div class="editorial-grid">
+        <button class="shot span-4 tall" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586526/IMG_1946.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1100/v1788586526/IMG_1946.jpg" alt="Collection 2 photograph 1" loading="lazy"></button>
+        <button class="shot span-4 tall" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586519/IMG_1951.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1100/v1788586519/IMG_1951.jpg" alt="Collection 2 photograph 2" loading="lazy"></button>
+        <button class="shot span-4 wide" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586789/IMG_2043.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1200/v1788586789/IMG_2043.jpg" alt="Collection 2 photograph 3" loading="lazy"></button>
+        <button class="shot span-7 wide" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586549/IMG_2057.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1500/v1788586549/IMG_2057.jpg" alt="Collection 2 photograph 4" loading="lazy"></button>
+        <button class="shot span-5 tall" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586556/IMG_2067.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1200/v1788586556/IMG_2067.jpg" alt="Collection 2 photograph 5" loading="lazy"></button>
+        <button class="shot span-6 wide" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586531/IMG_2104.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1400/v1788586531/IMG_2104.jpg" alt="Collection 2 photograph 6" loading="lazy"></button>
+        <button class="shot span-6 wide" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586527/IMG_2137-Edit.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1400/v1788586527/IMG_2137-Edit.jpg" alt="Collection 2 photograph 7" loading="lazy"></button>
+        <button class="shot span-12 panorama" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586535/IMG_2145.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1700/v1788586535/IMG_2145.jpg" alt="Collection 2 photograph 8" loading="lazy"></button>
       </div></section>
-      <section id="collection-03" class="collection"><div class="collection-head"><span>Collection 03</span><span>7 images</span></div><div class="editorial-grid">
-        <button class="shot span-4 tall" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586681/IMG_3991-Enhanced-NR-Edit.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1100/v1788586681/IMG_3991-Enhanced-NR-Edit.jpg" alt="Collection 03 photograph 1" loading="lazy"></button>
-        <button class="shot span-4 tall" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586682/IMG_5340.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1100/v1788586682/IMG_5340.jpg" alt="Collection 03 photograph 2" loading="lazy"></button>
-        <button class="shot span-4 wide" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586794/IMG_5402-Edit-2.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1200/v1788586794/IMG_5402-Edit-2.jpg" alt="Collection 03 photograph 3" loading="lazy"></button>
-        <button class="shot span-12 panorama" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586692/IMG_6259-Pano-Edit.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1800/v1788586692/IMG_6259-Pano-Edit.jpg" alt="Collection 03 panoramic photograph" loading="lazy"></button>
-        <button class="shot span-4 tall" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586794/IMG_6356-Enhanced-NR.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1100/v1788586794/IMG_6356-Enhanced-NR.jpg" alt="Collection 03 photograph 5" loading="lazy"></button>
-        <button class="shot span-4 tall" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586533/IMG_6413.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1100/v1788586533/IMG_6413.jpg" alt="Collection 03 photograph 6" loading="lazy"></button>
-        <button class="shot span-4 tall" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586550/IMG_6445.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1100/v1788586550/IMG_6445.jpg" alt="Collection 03 photograph 7" loading="lazy"></button>
+
+      <section id="collection-3" class="collection is-collapsed"><div class="collection-head"><span>Collection 3</span><span>7 images</span></div><div class="editorial-grid">
+        <button class="shot span-4 tall" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586681/IMG_3991-Enhanced-NR-Edit.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1100/v1788586681/IMG_3991-Enhanced-NR-Edit.jpg" alt="Collection 3 photograph 1" loading="lazy"></button>
+        <button class="shot span-4 tall" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586682/IMG_5340.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1100/v1788586682/IMG_5340.jpg" alt="Collection 3 photograph 2" loading="lazy"></button>
+        <button class="shot span-4 wide" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586794/IMG_5402-Edit-2.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1200/v1788586794/IMG_5402-Edit-2.jpg" alt="Collection 3 photograph 3" loading="lazy"></button>
+        <button class="shot span-12 panorama" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586692/IMG_6259-Pano-Edit.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1800/v1788586692/IMG_6259-Pano-Edit.jpg" alt="Collection 3 panoramic photograph" loading="lazy"></button>
+        <button class="shot span-4 tall" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586794/IMG_6356-Enhanced-NR.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1100/v1788586794/IMG_6356-Enhanced-NR.jpg" alt="Collection 3 photograph 5" loading="lazy"></button>
+        <button class="shot span-4 tall" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586533/IMG_6413.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1100/v1788586533/IMG_6413.jpg" alt="Collection 3 photograph 6" loading="lazy"></button>
+        <button class="shot span-4 tall" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586550/IMG_6445.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1100/v1788586550/IMG_6445.jpg" alt="Collection 3 photograph 7" loading="lazy"></button>
       </div></section>
-      <section id="collection-04" class="collection"><div class="collection-head"><span>Collection 04</span><span>6 images</span></div><div class="editorial-grid">
-        <button class="shot span-4 tall" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586528/IMG_8012.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1100/v1788586528/IMG_8012.jpg" alt="Collection 04 photograph 1" loading="lazy"></button>
-        <button class="shot span-4 tall" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586519/IMG_8041.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1100/v1788586519/IMG_8041.jpg" alt="Collection 04 photograph 2" loading="lazy"></button>
-        <button class="shot span-4 tall" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586527/IMG_8057.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1100/v1788586527/IMG_8057.jpg" alt="Collection 04 photograph 3" loading="lazy"></button>
-        <button class="shot span-5 tall" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586516/IMG_8193-Enhanced-NR.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1200/v1788586516/IMG_8193-Enhanced-NR.jpg" alt="Collection 04 photograph 4" loading="lazy"></button>
-        <button class="shot span-7 wide" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586511/IMG_8226-Enhanced-NR.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1500/v1788586511/IMG_8226-Enhanced-NR.jpg" alt="Collection 04 photograph 5" loading="lazy"></button>
-        <button class="shot span-12 feature" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586515/IMG_8417-Enhanced-NR.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1700/v1788586515/IMG_8417-Enhanced-NR.jpg" alt="Collection 04 photograph 6" loading="lazy"></button>
+
+      <section id="collection-4" class="collection is-collapsed"><div class="collection-head"><span>Collection 4</span><span>6 images</span></div><div class="editorial-grid">
+        <button class="shot span-4 tall" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586528/IMG_8012.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1100/v1788586528/IMG_8012.jpg" alt="Collection 4 photograph 1" loading="lazy"></button>
+        <button class="shot span-4 tall" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586519/IMG_8041.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1100/v1788586519/IMG_8041.jpg" alt="Collection 4 photograph 2" loading="lazy"></button>
+        <button class="shot span-4 tall" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586527/IMG_8057.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1100/v1788586527/IMG_8057.jpg" alt="Collection 4 photograph 3" loading="lazy"></button>
+        <button class="shot span-5 tall" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586516/IMG_8193-Enhanced-NR.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1200/v1788586516/IMG_8193-Enhanced-NR.jpg" alt="Collection 4 photograph 4" loading="lazy"></button>
+        <button class="shot span-7 wide" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586511/IMG_8226-Enhanced-NR.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1500/v1788586511/IMG_8226-Enhanced-NR.jpg" alt="Collection 4 photograph 5" loading="lazy"></button>
+        <button class="shot span-12 feature" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788586515/IMG_8417-Enhanced-NR.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_1700/v1788586515/IMG_8417-Enhanced-NR.jpg" alt="Collection 4 photograph 6" loading="lazy"></button>
       </div></section>
-      <section id="archive" class="collection archive-collection"><div class="collection-head"><span>Archive</span><span>10 images</span></div><div class="archive-grid">
-        <button class="archive-shot" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788580477/20230401-IMG_0116.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_900/v1788580477/20230401-IMG_0116.jpg" alt="Archive photograph 1" loading="lazy"></button>
-        <button class="archive-shot" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788580477/IMG_9534.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_900/v1788580477/IMG_9534.jpg" alt="Archive photograph 2" loading="lazy"></button>
-        <button class="archive-shot" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788580477/20230401-IMG_9918.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_900/v1788580477/20230401-IMG_9918.jpg" alt="Archive photograph 3" loading="lazy"></button>
-        <button class="archive-shot" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788580477/IMG_6943.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_900/v1788580477/IMG_6943.jpg" alt="Archive photograph 4" loading="lazy"></button>
-        <button class="archive-shot" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788580477/IMG_7401.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_900/v1788580477/IMG_7401.jpg" alt="Archive photograph 5" loading="lazy"></button>
-        <button class="archive-shot" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788580477/20230401-IMG_9898.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_900/v1788580477/20230401-IMG_9898.jpg" alt="Archive photograph 6" loading="lazy"></button>
-        <button class="archive-shot" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788580477/20230214-IMG_8207.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_900/v1788580477/20230214-IMG_8207.jpg" alt="Archive photograph 7" loading="lazy"></button>
-        <button class="archive-shot" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788580478/IMG_6875.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_900/v1788580478/IMG_6875.jpg" alt="Archive photograph 8" loading="lazy"></button>
-        <button class="archive-shot" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788580478/IMG_3118.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_900/v1788580478/IMG_3118.jpg" alt="Archive photograph 9" loading="lazy"></button>
-        <button class="archive-shot" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788580478/IMG_8785-Enhanced-NR.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_900/v1788580478/IMG_8785-Enhanced-NR.jpg" alt="Archive photograph 10" loading="lazy"></button>
+
+      <section id="collection-5" class="collection archive-collection is-collapsed"><div class="collection-head"><span>Collection 5</span><span>10 images</span></div><div class="archive-grid">
+        <button class="archive-shot" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788580477/20230401-IMG_0116.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_900/v1788580477/20230401-IMG_0116.jpg" alt="Collection 5 photograph 1" loading="lazy"></button>
+        <button class="archive-shot" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788580477/IMG_9534.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_900/v1788580477/IMG_9534.jpg" alt="Collection 5 photograph 2" loading="lazy"></button>
+        <button class="archive-shot" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788580477/20230401-IMG_9918.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_900/v1788580477/20230401-IMG_9918.jpg" alt="Collection 5 photograph 3" loading="lazy"></button>
+        <button class="archive-shot" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788580477/IMG_6943.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_900/v1788580477/IMG_6943.jpg" alt="Collection 5 photograph 4" loading="lazy"></button>
+        <button class="archive-shot" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788580477/IMG_7401.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_900/v1788580477/IMG_7401.jpg" alt="Collection 5 photograph 5" loading="lazy"></button>
+        <button class="archive-shot" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788580477/20230401-IMG_9898.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_900/v1788580477/20230401-IMG_9898.jpg" alt="Collection 5 photograph 6" loading="lazy"></button>
+        <button class="archive-shot" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788580477/20230214-IMG_8207.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_900/v1788580477/20230214-IMG_8207.jpg" alt="Collection 5 photograph 7" loading="lazy"></button>
+        <button class="archive-shot" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788580478/IMG_6875.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_900/v1788580478/IMG_6875.jpg" alt="Collection 5 photograph 8" loading="lazy"></button>
+        <button class="archive-shot" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788580478/IMG_3118.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_900/v1788580478/IMG_3118.jpg" alt="Collection 5 photograph 9" loading="lazy"></button>
+        <button class="archive-shot" data-full="https://res.cloudinary.com/pn2xcrk8/image/upload/v1788580478/IMG_8785-Enhanced-NR.jpg"><img src="https://res.cloudinary.com/pn2xcrk8/image/upload/f_auto,q_auto,w_900/v1788580478/IMG_8785-Enhanced-NR.jpg" alt="Collection 5 photograph 10" loading="lazy"></button>
       </div></section>
     </section>
 
@@ -103,6 +117,34 @@
         window.setInterval(advance, 5000);
         if (reducedMotion) document.documentElement.classList.add('reduced-motion');
       }
+
+      const collections = Array.from(document.querySelectorAll('.collection'));
+      collections.forEach(collection => {
+        const head = collection.querySelector('.collection-head');
+        if (!head) return;
+        head.setAttribute('role','button');
+        head.setAttribute('tabindex','0');
+        head.setAttribute('aria-expanded',String(!collection.classList.contains('is-collapsed')));
+        const toggle = () => {
+          const collapsed = collection.classList.toggle('is-collapsed');
+          head.setAttribute('aria-expanded',String(!collapsed));
+        };
+        head.addEventListener('click',toggle);
+        head.addEventListener('keydown',event => {
+          if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggle(); }
+        });
+      });
+
+      document.querySelectorAll('.work-index a').forEach(link => {
+        link.addEventListener('click',() => {
+          const collection = document.querySelector(link.getAttribute('href'));
+          if (!collection) return;
+          collection.classList.remove('is-collapsed');
+          const head = collection.querySelector('.collection-head');
+          if (head) head.setAttribute('aria-expanded','true');
+        });
+      });
+
       const lightbox = document.getElementById('lightbox'); const lightboxImage = lightbox.querySelector('img'); const closeButton = lightbox.querySelector('.lightbox-close');
       const openLightbox = (button) => { lightboxImage.src = button.dataset.full; lightbox.classList.add('is-open'); lightbox.setAttribute('aria-hidden','false'); document.body.classList.add('lightbox-open'); closeButton.focus(); };
       const closeLightbox = () => { lightbox.classList.remove('is-open'); lightbox.setAttribute('aria-hidden','true'); document.body.classList.remove('lightbox-open'); lightboxImage.src=''; };
