@@ -49,3 +49,8 @@ footer::before{content:"◆ ◆ ◆";font-size:7px;letter-spacing:4px;color:#8a8
   .booking{margin-top:30px}
   .booking-cta{width:100%}
 }
+
+/* Shoot availability */
+.hero-availability{font-size:14px;line-height:1.8;color:#c5c1b9;max-width:510px;margin:24px 0 0}
+.hero-availability+.actions{margin-top:24px}
+@media(max-width:650px){.hero-availability{font-size:13px;line-height:1.7;margin-top:24px}}
